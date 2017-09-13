@@ -32,7 +32,7 @@ for submission in subreddit.stream.submissions():
     if submission.id not in posts_replied_to:
         
         # Do a case insensitive search
-        if re.search("iota", submission.title, re.IGNORECASE):
+        if re.search("iota4earth", submission.title, re.IGNORECASE):
             # Reply to the post
             submission.reply(“Thank you for your contribution to the earth. +200 IOTA")
             print("Bot replying to : ", submission.title)
