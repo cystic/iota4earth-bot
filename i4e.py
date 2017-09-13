@@ -24,8 +24,8 @@ else:
         posts_replied_to = list(filter(None, posts_replied_to))
 
 # Get the top stream of values from our subreddit
-subreddit = reddit.subreddit('iota4earth’)
-for submission in subreddit.stream.submissions():  
+subreddit = reddit.subreddit('iota4earth')
+for submission in subreddit.stream.submissions():
     #print(submission.title)
     
     # If we haven't replied to this post before
@@ -34,7 +34,7 @@ for submission in subreddit.stream.submissions():
         # Do a case insensitive search
         if re.search("iota4earth", submission.title, re.IGNORECASE):
             # Reply to the post
-            submission.reply(“Thank you for your contribution to the earth. +200 IOTA")
+            submission.reply("Thank you for your contribution to the Earth. +200 IOTA")
             print("Bot replying to : ", submission.title)
             
             # Append the current id into our list
