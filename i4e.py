@@ -3,7 +3,7 @@ import praw
 import pdb
 import re
 import os
-
+import time
 
 # Create the Reddit instance
 reddit = praw.Reddit('bot1')
@@ -41,3 +41,4 @@ for submission in subreddit.stream.submissions():
             posts_replied_to.append(submission.id)
             with open("posts_replied_to.txt", "a") as f:
                 f.write('\n' + submission.id)
+            time.sleep(3)
